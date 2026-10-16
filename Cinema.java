@@ -100,6 +100,55 @@ class Cinema {
         } while (opcao != 0);
     }
 
+    public static void informacoesCinema(Scanner input, Sessao sessao1, Sessao sessao2, Sessao sessao3,
+            Sessao sessao4, Sessao sessao5) {
+        int opcao;
+
+        do {
+            System.out.print(
+                    "== Informações cinema ==\n" +
+                            "1- Consultar o preço integral do ingresso\n" +
+                            "2- Alterar o preço integral do ingresso\n" +
+                            "3- Consultar os totais de ingressos vendidos e arrecadação\n" +
+                            "0- Voltar ao menu principal\n\n" +
+                            ": ");
+            opcao = input.nextInt();
+
+            switch (opcao) {
+                case 1:
+                    System.out.printf("Preço integral: R$ %.2f%n", Sessao.cPrecoingresso());
+                    break;
+                case 2:
+                    System.out.print("Digite o novo preço integral dos ingressos: ");
+                    double preco = input.nextDouble();
+
+                    if (Sessao.altPrecoingresso(preco)) {
+                        System.out.println("Preço alterado com sucesso!");
+                    } else {
+                        System.out.println("Preço inválido! Alteração recusada.");
+                    }
+                    break;
+                case 3:
+                    int totalIngressos = sessao1.cIngreVend() +
+                            sessao2.cIngreVend() +
+                            sessao3.cIngreVend() +
+                            sessao4.cIngreVend() +
+                            sessao5.cIngreVend();
+
+                    double totalArrecadado = sessao1.cValorArre() +
+                            sessao2.cValorArre() +
+                            sessao3.cValorArre() +
+                            sessao4.cValorArre() +
+                            sessao5.cValorArre();
+
+                    System.out.println("Total de ingressos vendidos: " + totalIngressos);
+                    System.out.printf("Preço integral: R$ %.2f%n", totalArrecadado);
+                default:
+                    break;
+            }
+        } while (opcao != 0);
+    }
+
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
 
@@ -139,7 +188,7 @@ class Cinema {
 
                     break;
                 case 3:
-
+                    informacoesCinema(input, sessao1, sessao2, sessao3, sessao4, sessao5);
                     break;
                 case 0:
                     break;
