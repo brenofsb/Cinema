@@ -105,7 +105,7 @@ public class Filme {
 		return categoria;
 	}
 
-	public void setCategoria(String categoria) {
+	private void setCategoria(String categoria) {
 		this.categoria = categoria;
 	}
 	
