@@ -1,7 +1,5 @@
 // Breno Ferreira Santos Borges e Yan Barreto Guedes Vieira
 
-package Trabalho;
-
 public class Filme {
 	private String titulo;
 	private double duracao;
