@@ -1,7 +1,5 @@
 // Breno Ferreira Santos Borges e Yan Barreto Guedes Vieira
 
-package Trabalho;
-
 import java.util.Scanner;
 import java.time.LocalTime;
 
