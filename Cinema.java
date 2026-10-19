@@ -284,18 +284,11 @@ public class Cinema {
                     break;
                 case 2:
                     System.out.print("Digite o novo preço integral dos ingressos: ");
-                    // Lê como texto e aceita vírgula ou ponto como separador decimal
-                    String texto = input.nextLine().trim().replace(',', '.');
+                    double preco;
 
-                    try {
-                        double preco = Double.parseDouble(texto);
-
-                        if (Sessao.altPrecoingresso(preco)) {
-                            System.out.println("Preço alterado com sucesso!");
-                        } else {
-                            System.out.println("Preço inválido! Alteração recusada.");
-                        }
-                    } catch (NumberFormatException e) {
+                    if (Sessao.altPrecoingresso(preco)) {
+                        System.out.println("Preço alterado com sucesso!");
+                    } else {
                         System.out.println("Preço inválido! Alteração recusada.");
                     }
                     System.out.println();
