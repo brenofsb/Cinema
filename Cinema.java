@@ -76,6 +76,7 @@ public class Cinema {
                 case 1:
                     System.out.println("== Dados do filme ==");
                     exibirDadosFilme(filme);
+                    System.out.println();
                     break;
                 case 2:
                     System.out.print(
@@ -93,17 +94,19 @@ public class Cinema {
                     } else {
                         System.out.println("Categoria inválida! Alteração recusada.");
                     }
+                    System.out.println();
                     break;
                 case 3:
                     System.out.print("Digite a nova sinopse do filme: ");
                     String sinopse = input.nextLine();
 
                     filme.setSinopse(sinopse);
+                    System.out.println();
                     break;
                 case 0:
                     break;
                 default:
-                    System.out.println("Opção inválida! Tente novamente.");
+                    System.out.println("Opção inválida! Tente novamente.\n");
             }
         } while (opcao != 0);
     }
@@ -234,20 +237,25 @@ public class Cinema {
             switch (opcao) {
                 case 1:
                     detalhesSessao(sessao);
+                    System.out.println();
+
                     break;
                 case 2:
                     venderIngresso(input, sessao);
+                    System.out.println();
                     break;
                 case 3:
                     System.out.println("Lugares disponíveis: " + sessao.lugarDisponivel());
+                                        System.out.println();
                     break;
                 case 4:
                     System.out.println("Horário de término: " + sessao.cHorarioTermino());
+                    System.out.println();
                     break;
                 case 0:
                     break;
                 default:
-                    System.out.println("Opção inválida! Tente novamente.");
+                    System.out.println("Opção inválida! Tente novamente.\n");
             }
         } while (opcao != 0);
     }
@@ -272,6 +280,7 @@ public class Cinema {
             switch (opcao) {
                 case 1:
                     System.out.printf("Preço integral: R$ %.2f%n", Sessao.cPrecoingresso());
+                    System.out.println();
                     break;
                 case 2:
                     System.out.print("Digite o novo preço integral dos ingressos: ");
@@ -289,6 +298,7 @@ public class Cinema {
                     } catch (NumberFormatException e) {
                         System.out.println("Preço inválido! Alteração recusada.");
                     }
+                    System.out.println();
                     break;
                 case 3:
                     int totalIngressos = sessao1.cIngreVend() +
@@ -305,11 +315,12 @@ public class Cinema {
 
                     System.out.println("Total de ingressos vendidos: " + totalIngressos);
                     System.out.printf("Valor total arrecadado: R$ %.2f%n", totalArrecadado);
+                    System.out.println();
                     break;
                 case 0:
                     break;
                 default:
-                    System.out.println("Opção inválida! Tente novamente.");
+                    System.out.println("Opção inválida! Tente novamente.\n");
             }
         } while (opcao != 0);
     }
