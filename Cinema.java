@@ -284,7 +284,7 @@ public class Cinema {
                     break;
                 case 2:
                     System.out.print("Digite o novo preço integral dos ingressos: ");
-                    double preco;
+                    double preco = input.nextDouble();
 
                     if (Sessao.altPrecoingresso(preco)) {
                         System.out.println("Preço alterado com sucesso!");
