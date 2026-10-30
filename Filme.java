@@ -69,24 +69,12 @@ public class Filme {
 		return titulo;
 	}
 
-	private void setTitulo(String titulo) {
-		this.titulo = titulo;
-	}
-
 	public double getDuracao() {
 		return duracao;
 	}
 
-	private void setDuracao(double duracao) {
-		this.duracao = duracao;
-	}
-
 	public int getClassificacao() {
 		return classificacao;
-	}
-
-	private void setClassificacao(int classificacao) {
-		this.classificacao = classificacao;
 	}
 
 	public String getSinopse() {
@@ -100,14 +88,4 @@ public class Filme {
 	public String getCategoria() {
 		return categoria;
 	}
-
-	private void setCategoria(String categoria) {
-		this.categoria = categoria;
-	}
-	
-	
-	
-	
-	
-
 }

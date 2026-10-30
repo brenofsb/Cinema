@@ -18,6 +18,10 @@ Projeto desenvolvido para a disciplina de **Programação Orientada a Objetos**.
 - `Filme.java`: representa os filmes e suas informações.
 - `Sessao.java`: representa as sessões, controla ingressos, capacidade e arrecadação.
 
+## Colaboradores
+
+- Yan Barreto Guedes Vieira <https://github.com/Yan-Barreto>
+
 ## Requisitos
 
 - JDK 11 ou superior.
