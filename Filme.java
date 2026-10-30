@@ -59,8 +59,6 @@ public class Filme {
 	       categoria.equalsIgnoreCase("Terror") ) {
 	    	this.categoria = categoria;
 	    	return true;
-	    } else if (categoria == null) {
-	    	return false;
 	    } else {
 	    	return false;
 	    }
